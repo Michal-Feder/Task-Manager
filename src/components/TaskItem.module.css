@@ -1,0 +1,97 @@
+.taskCardContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.taskCard {
+    border-radius: 12px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.taskCard.completed {
+    opacity: 0.7;
+}
+
+.taskInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.categoryIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.taskDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.taskTitle {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.taskCategory {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.taskActions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.actionButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font-size: 20px;
+    transition: opacity 0.2s;
+}
+
+.actionButton:hover {
+    opacity: 0.6;
+}
+
+/* עיצוב ספציפי למצב אור/חושך */
+:global(.dark-theme) .taskCard {
+    background-color: var(--dark-card);
+    border: 1px solid var(--border-dark);
+}
+
+:global(.light-theme) .taskCard {
+    background-color: var(--light-card);
+    border: 1px solid var(--border-light);
+}
+
+:global(.dark-theme) .taskCard.completed {
+    background-color: var(--completed-dark);
+}
+
+:global(.light-theme) .taskCard.completed {
+    background-color: var(--completed-light);
+}

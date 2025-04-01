@@ -1,0 +1,74 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px 20px 20px 20px;
+  }
+  
+  .taskSections {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .sectionHeader {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    justify-content: space-between;
+  }
+  
+  .sectionHeader .sp {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+  
+  .sectionHeader .sectionCount {
+    color: var(--secondary-text);
+    margin-right: 10px;
+  }
+  
+  .filter {
+    width: 160px;
+  }
+  
+  .btn {
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: var(--primary);
+    color: var(--text-dark);
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    gap: 8px;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .inProgressSection,
+  .completedSection {
+    width: 100%;
+  }
+  
+  .sp {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }

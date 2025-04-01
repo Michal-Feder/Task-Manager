@@ -1,0 +1,37 @@
+.icon {
+    display: inline-block;
+  }
+  
+  .categoryIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  
+  .categoryIconSelect {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .edit path,
+  .del path {
+    fill: var(--primary);
+  }
+  
+  .plus path {
+    fill: var(--light-bg);
+  }
+  
+  .back path {
+    fill: var(--primary);
+  }

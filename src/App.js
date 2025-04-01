@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import HomePage from './pages/HomePage';
+import TaskManagementPage from './pages/TaskManagementPage';
+import { useAnalytics } from './utils/analytics';
 import './App.css';
 
 function App() {
+
+  useAnalytics();
+  const isDarkMode = useSelector((state) => state.theme.darkMode);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`app ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/task/new" element={<TaskManagementPage />} />
+        <Route path="/task/edit/:id" element={<TaskManagementPage />} />
+      </Routes>
     </div>
   );
 }

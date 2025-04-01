@@ -1,0 +1,108 @@
+.inputContainer {
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0px 1px 6px 0px #0000001F;
+    transition: all 0.2s ease;
+    height: 50px;
+}
+
+.inputLabel {
+    position: absolute;
+    left: 12px;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    font-size: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.focused .inputLabel,
+.filled .inputLabel {
+    top: 12px;
+    font-size: 10px;
+}
+
+.inputField {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: inherit;
+}
+
+.focused .inputField,
+.filled .inputField {
+    margin-top: 12px;
+}
+
+:global(.light-theme) .focused {
+    border: 1px solid var(--primary);
+    color: var(--text-light);
+}
+
+:global(.light-theme) .focused .inputLabel {
+    color: var(--dark-card);
+}
+
+:global(.light-theme) .inputContainer {
+    background-color: var(--light-card);
+    border: none;
+    color: var(--text-light);
+}
+
+
+:global(.dark-theme) .focused {
+    border: 1px solid var(--primary);
+    color: var(--text-dark);
+}
+
+:global(.dark-theme) .focused .inputLabel {
+    /* color: var(--primary); */
+    color: #EEEEEE;
+
+}
+
+:global(.dark-theme) .inputContainer {
+    background-color: var(--dark-card);
+    border: none;
+    color: var(--text-dark);
+}
+
+.error {
+    border: 2px solid var(--error) !important;
+    box-shadow: 0 1px 6px 0px rgba(239, 68, 68, 0.1);
+}
+
+.errorMessage {
+    margin-top: 6px;
+    margin-left: 15px;
+    font-size: 14px;
+    color: var(--error);
+}
+
+.clearButton {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--dark-bg);
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clearButton:hover {
+    opacity: 0.6;
+}
+
+.clearIcon {
+    width: 20px;
+    height: 20px;
+}

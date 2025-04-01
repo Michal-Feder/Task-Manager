@@ -1,0 +1,78 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px 20px 20px 20px;
+  }
+  
+  .backButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font-weight: 500;
+    padding: 0;
+    margin-bottom: 16px;
+    margin-top: 30px;
+  }
+  
+  .formGroup {
+    margin-bottom: 8px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    width: 99%;
+    margin: auto;
+  }
+  
+  .formControl {
+    width: 100%;
+    padding: 0;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-size: 16px;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .buttonPrimary {
+    background-color: var(--primary);
+    color: var(--light-bg);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+  
+  .buttonPrimary:hover {
+    opacity: 0.9;
+  }
+  
+  .fieldsReq {
+    font-size: 14px;
+    color: var(--error);
+  }
+  
+  .checkboxContainer {
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .checkboxContainer input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }

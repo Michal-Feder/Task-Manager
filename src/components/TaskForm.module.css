@@ -1,0 +1,91 @@
+.formContainer {
+    margin-top: 20px;
+  }
+  
+  .formTitle {
+    margin-bottom: 25px;
+    font-weight: 600;
+  }
+  
+  .formGroup {
+    margin-bottom: 16px;
+  }
+  
+  .fieldsRequired {
+    font-size: 14px;
+    color: var(--error);
+    margin-top: 5px;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .saveButton {
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: var(--primary);
+    color: var(--text-dark);
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+  
+  .saveButton:hover {
+    opacity: 0.9;
+  }
+  
+  .borderButton {
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid var(--primary);
+    padding: 9px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 450;
+    transition: opacity 0.2s;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+  
+  .borderButton:hover {
+    opacity: 0.9;
+  }
+  
+  .backButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font-weight: 500;
+    padding: 0;
+    margin-bottom: 16px;
+    margin-top: 30px;
+  }
+  
+  :global(.dark-theme) .borderButton {
+    background-color: var(--dark-bg);
+    color: var(--text-dark);
+  }
+  
+  :global(.light-theme) .borderButton {
+    background-color: var(--ligth-bg);
+    color: var(--text-light);
+  }
