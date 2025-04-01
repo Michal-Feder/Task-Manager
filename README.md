@@ -2,11 +2,6 @@
 
 A modern React application for task management with category filtering, light/dark mode, and persistent storage.
 
-## 📷 Screenshots
-
-![Light Mode](https://via.placeholder.com/800x450?text=Task+Manager+Light+Mode)
-![Dark Mode](https://via.placeholder.com/800x450?text=Task+Manager+Dark+Mode)
-
 ## ✨ Features
 
 - Task creation, editing, and deletion
@@ -37,15 +32,24 @@ react-task-manager/
 ├── src/
 │   ├── components/
 │   │   ├── CategorySelect.jsx
+│   │   ├── CategorySelect.module.css
 │   │   ├── Header.jsx
+│   │   ├── Header.module.css
 │   │   ├── Icon.jsx
+│   │   ├── Icon.module.css
 │   │   ├── InputField.jsx
+│   │   ├── InputField.module.css
 │   │   ├── TaskForm.jsx
+│   │   ├── TaskForm.module.css
 │   │   ├── TaskItem.jsx
+│   │   ├── TaskItem.module.css
 │   │   └── TaskList.jsx
+│   │   └── TaskList.module.css
 │   ├── pages/
 │   │   ├── HomePage.jsx
+│   │   ├── HomePage.module.css
 │   │   └── TaskManagementPage.jsx
+│   │   └── TaskManagementPage.module.css
 │   ├── redux/
 │   │   ├── store.js
 │   │   ├── taskSlice.js
@@ -56,6 +60,7 @@ react-task-manager/
 │   ├── App.css
 │   ├── App.js
 │   └── index.js
+│   └── index.css
 ├── .gitignore
 ├── package.json
 └── README.md
@@ -72,60 +77,13 @@ react-task-manager/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/react-task-manager.git
-   cd react-task-manager
+   git clone https://github.com/Michal-Feder/Task-Manager
+   cd Task-Manager
    ```
 
 2. Install dependencies:
    ```bash
    npm install
-   ```
-
-3. Create the `iconConfig.js` file in the `src/utils` directory with the following content:
-   ```javascript
-   import { 
-     Home, Edit, Trash, Sun, Moon, Plus, ArrowLeft, 
-     X as Close, Tag, ShoppingCart, Briefcase, 
-     BookOpen, Coffee, Camera, Music, Code, 
-     Palette, Heart, Globe
-   } from 'react-feather';
-
-   // Define available category icons
-   export const ICONS = {
-     'Home': Home,
-     'Edit': Edit,
-     'Trash': Trash,
-     'Sun': Sun,
-     'Moon': Moon,
-     'Plus': Plus,
-     'Back': ArrowLeft,
-     'Close': Close,
-     'Logo': Tag,
-     'Shopping': ShoppingCart,
-     'Work': Briefcase,
-     'Study': BookOpen,
-     'Break': Coffee,
-     'Photography': Camera,
-     'Music': Music,
-     'Coding': Code,
-     'Art': Palette,
-     'Personal': Heart,
-     'Travel': Globe
-   };
-
-   // Categories available for tasks
-   export const CATEGORIES = [
-     'Shopping', 
-     'Work', 
-     'Study', 
-     'Break', 
-     'Photography', 
-     'Music', 
-     'Coding', 
-     'Art', 
-     'Personal', 
-     'Travel'
-   ];
    ```
 
 4. Start the development server:
@@ -169,22 +127,6 @@ This creates an optimized production build in the `build` folder.
 5. **Changing Theme**:
    - Click the sun/moon icon in the header to toggle between light and dark mode
 
-## 🧩 Adding New Categories
-
-To add new categories to the application:
-
-1. Update the `CATEGORIES` array in `src/utils/iconConfig.js`
-2. Add the corresponding icon import and entry in the `ICONS` object
-3. Add the CSS variable for the category color in `App.css`:
-   ```css
-   :root {
-     --Shopping: #FF6B6B;
-     --Work: #4ECDC4;
-     /* Add your new category color here */
-     --Your-Category: #HEX_COLOR;
-   }
-   ```
-
 ## 🔄 State Management
 
 The application uses Redux Toolkit for state management:
@@ -199,16 +141,3 @@ The application is designed to work on both desktop and mobile devices:
 - Hover effects for task actions on desktop
 - Responsive layouts that adapt to screen size
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
